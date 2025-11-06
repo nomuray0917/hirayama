@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2M 革命的ボーリング</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Inter) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Noto Sans JP と Inter を適用 */
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #1a0000; /* さらに暗い赤色の背景 */
+        }
+        
+        /* 星のアイコン（SVG） */
+        .star-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            fill: #FFD700; /* 金色 */
+        }
+        
+        /* 影を強くする */
+        .text-shadow-strong {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .text-shadow-gold {
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* ゼロコーラのボトルピンのスタイル */
+        .coke-bottle-pin {
+            width: 3rem; /* サイズ調整 */
+            height: auto;
+            margin: 0 0.5rem;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* 光る効果 */
+            animation: pulse-bottle 2s infinite alternate; /* 点滅アニメーション */
+        }
+
+        @keyframes pulse-bottle {
+            0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); }
+        }
+
+    </style>
+</head>
+<body class="bg-red-900 text-white antialiased">
+
+    <!-- 全体コンテナ --><div class="container mx-auto p-4 max-w-4xl min-h-screen flex flex-col items-center justify-center">
+
+        <!-- ヘッダー / メインビジュアル --><header class="w-full text-center p-6 bg-red-800 border-b-4 border-yellow-400 rounded-lg shadow-2xl shadow-black/50">
+            
+            <div class="flex justify-center items-center gap-4 mb-4">
+                <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <h1 class="text-4xl md:text-6xl font-black text-yellow-300 text-shadow-strong tracking-wider">
+                    平山に栄光あれ
+                </h1>
+                <svg class="star-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+
+            <p class="text-2xl md:text-3xl font-bold text-white text-shadow-strong">
+                2Mが捧ぐ 革命的ボーリング
+            </p>
+        </header>
+
+        <!-- メインコンテンツ --><main class="w-full mt-8">
+
+            <!-- 平山同志の肖像 --><section class="text-center bg-black/30 p-6 rounded-lg border-2 border-red-600 shadow-xl">
+                <h2 class="text-3xl font-bold text-red-300 mb-4 text-shadow-gold">偉大なる指導者 平山同志</h2>
+                
+                <!-- プレースホルダー画像 --><div class="flex justify-center mb-4">
+                    <img src="https://placehold.co/300x400/CC0000/FFFFFF?text=%E5%B9%B3%E5%B1%B1%E5%90%8C%E5%BF%97%0A(HIRAYAMA)" 
+                         alt="偉大なる指導者 平山同志の肖像"
+                         class="border-8 border-yellow-500 rounded-md shadow-2xl shadow-yellow-500/30 animate-pulse"
+                         onerror="this.onerror=null; this.src='https://placehold.co/300x400/CC0000/FFFFFF?text=%E5%B9%B3%E5%B1%B1%E5%90%8C%E5%BF%97';">
+                </div>
+                
+                <blockquote class="text-xl md:text-2xl italic text-red-100 font-semibold px-4">
+                    「すべてのピンは、人民の勝利のために倒されるべきである。」
+                </blockquote>
+                <cite class="block text-lg text-yellow-300 mt-2 text-shadow-gold">- 平山 -</cite>
+            </section>
+
+            <!-- ✨ 平山同志の神託 (Gemini API) ✨ -->
+            <section class="mt-8 text-center bg-black/40 p-6 rounded-lg border-2 border-yellow-500 shadow-xl">
+                <h2 class="text-3xl font-bold text-yellow-300 mb-4 text-shadow-gold">✨ 平山同志の神託 ✨</h2>
+                <p class="text-lg text-red-100 mb-6">
+                    偉大なる指導者、平山同志からありがたいお言葉を授かろう。
+                    己の忠誠心を示し、ボタンを押すがよい。
+                </p>
+
+                <button id="geminiButton" class="bg-yellow-500 text-gray-900 font-bold text-2xl px-8 py-3 rounded-lg shadow-lg hover:bg-yellow-400 active:bg-yellow-600 transition duration-150 ease-in-out transform hover:scale-105 disabled:opacity-50 disabled:cursor-wait">
+                    神託を授かる
+                </button>
+
+                <div id="loadingIndicator" class="text-white text-lg mt-4 hidden">
+                    <div class="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-yellow-300"></div>
+                    <p>平山同志が思考中...</p>
+                </div>
+
+                <div id="geminiResponse" class="mt-6 p-4 bg-red-800 rounded-lg border border-red-600 shadow-inner min-h-[100px] flex items-center justify-center hidden">
+                    <p id="responseText" class="text-xl text-yellow-200 font-semibold italic"></p>
+                </div>
+            </section>
+
+            <!-- 展示内容 --><section class="mt-8 bg-red-700 p-6 rounded-lg border-2 border-red-500 shadow-lg">
+                <h2 class="text-3xl font-bold text-center text-white mb-4 text-shadow-strong">集え、革命の戦士たちよ！</h2>
+                
+                <p class="text-lg text-red-100 mb-4 leading-relaxed">
+                    諸君、高専祭の日は来たれり。
+                    我々2Mは、平山同志の崇高なる指導のもと、全人民に「革命的ボーリング」を公開する。
+                </p>
+                <p class="text-lg text-red-100 mb-6 leading-relaxed">
+                    これは単なる遊戯ではない。これは平山同志の御言葉を絶対とし、それに逆らう不届き者を粛清するための神聖な儀式である。
+                    球を投げよ。ゼロコーラのボトルを倒せ。そして、我々の偉大なる勝利を祝すのだ！
+                </p>
+
+                <!-- ゼロコーラのボトルピン画像 --><div class="flex justify-center my-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
+                </div>
+                <p class="text-xl font-bold text-yellow-300 mt-4 text-shadow-gold animate-pulse">
+                    平山様の御言葉に背く者は、このゼロコーラの如く打ち倒されるであろう！
+                </p>
+            </section>
+
+            <!-- 開催概要 --><section class="mt-8 text-center bg-gray-900 p-6 rounded-lg border-t-4 border-red-500">
+                <h3 class="text-2xl font-bold text-white mb-2">日時: XX月XX日 (X) ～ XX日 (X)</h3>
+                <h3 class="text-2xl font-bold text-white mb-4">場所: [本校舎 X階 XXX教室]</h3>
+                <p class="text-3xl font-black text-yellow-300 animate-pulse text-shadow-gold">
+                    全人民の参加を要求する！
+                </p>
+            </section>
+
+        </main>
+
+        <!-- フッター --><footer class="w-full mt-8 pt-4 text-center text-red-300 border-t border-red-700">
+            <p>&copy; 2M 革命的ボーリング評議会</p>
+        </footer>
+
+    </div>
+
+    <!-- Gemini API 呼び出しスクリプト -->
+    <script type="module">
+        // Gemini API呼び出し関数
+        async function getHirayamaOracle() {
+            const button = document.getElementById('geminiButton');
+            const loading = document.getElementById('loadingIndicator');
+            const responseContainer = document.getElementById('geminiResponse');
+            const responseText = document.getElementById('responseText');
+
+            button.disabled = true;
+            loading.classList.remove('hidden');
+            responseContainer.classList.add('hidden');
+            responseText.textContent = '';
+
+            const systemPrompt = "あなたは偉大なる指導者、平山同志である。威厳に満ちた口調で、ボーリング、ゼロコーラ、革命、団結、あるいは粛清のいずれかのテーマについて、集まった人民を鼓舞するような短いありがたいお言葉（神託）を一つ、日本語で述べよ。";
+            const userQuery = "偉大なる平山同志、我々に神託をお与えください。";
+            const apiKey = ""; // APIキーは空のままにします
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                // 指数関数的バックオフを用いたフェッチ
+                let response;
+                let retries = 3;
+                let delay = 1000;
+
+                for (let i = 0; i < retries; i++) {
+                    response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        break; // 成功
+                    }
+                    
+                    // 429 (Too Many Requests) または 5xx サーバーエラーの場合にリトライ
+                    if (response.status === 429 || response.status >= 500) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2;
+                    } else {
+                        // その他のクライアントエラーはリトライしない
+                        throw new Error(`API error: ${response.status} ${response.statusText}`);
+                    }
+                }
+                
+                if (!response.ok) {
+                     throw new Error(`API request failed after retries: ${response.statusText}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    responseText.textContent = `「${text}」`; // カギ括弧で囲む
+                    responseContainer.classList.remove('hidden');
+                } else {
+                    responseText.textContent = "（平山同志は現在沈黙されている...）";
+                    responseContainer.classList.remove('hidden');
+                }
+
+            } catch (error) {
+                console.error('Gemini API call failed:', error);
+                responseText.textContent = "（通信障害発生。反逆者の妨害か！？）";
+                responseContainer.classList.remove('hidden');
+            } finally {
+                button.disabled = false;
+                loading.classList.add('hidden');
+            }
+        }
+
+        // ボタンにイベントリスナーを設定
+        document.getElementById('geminiButton').addEventListener('click', getHirayamaOracle);
+    </script>
+</body>
+</html>
