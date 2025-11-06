@@ -31,18 +31,13 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         
-        /* ゼロコーラのボトルピンのスタイル */
-        .coke-bottle-pin {
-            width: 3rem; /* サイズ調整 */
+        /* ボーリングのピン（SVG） */
+        .bowling-pin {
+            width: 2rem; /* サイズ調整 */
             height: auto;
-            margin: 0 0.5rem;
-            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); /* 光る効果 */
-            animation: pulse-bottle 2s infinite alternate; /* 点滅アニメーション */
-        }
-
-        @keyframes pulse-bottle {
-            0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5)); }
-            100% { transform: scale(1.05); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)); }
+            fill: #FFFFFF;
+            margin: 0 0.25rem;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));
         }
 
     </style>
@@ -115,16 +110,16 @@
                 </p>
                 <p class="text-lg text-red-100 mb-6 leading-relaxed">
                     これは単なる遊戯ではない。これは平山同志の御言葉を絶対とし、それに逆らう不届き者を粛清するための神聖な儀式である。
-                    球を投げよ。ゼロコーラのボトルを倒せ。そして、我々の偉大なる勝利を祝すのだ！
+                    球を投げよ。ピンを倒せ。そして、我々の偉大なる勝利を祝すのだ！
                 </p>
 
-                <!-- ゼロコーラのボトルピン画像 --><div class="flex justify-center my-4">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Coca-Cola_Zero_Sugar_Bottle.png/250px-Coca-Cola_Zero_Sugar_Bottle.png" alt="ゼロコーラのボトルピン" class="coke-bottle-pin">
+                <!-- ボーリングピン アイコン --><div class="flex justify-center my-4">
+                    <svg class="bowling-pin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,2C10.89,2 10,2.89 10,4S10.89,6 12,6S14,5.11 14,4S13.11,2 12,2M13,7H11C7.13,7 4,10.13 4,14V22H8V14C8,12.34 9.34,11 11,11H13C14.66,11 16,12.34 16,14V22H20V14C20,10.13 16.87,7 13,7Z" /></svg>
+                    <svg class="bowling-pin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,2C10.89,2 10,2.89 10,4S10.89,6 12,6S14,5.11 14,4S13.11,2 12,2M13,7H11C7.13,7 4,10.13 4,14V22H8V14C8,12.34 9.34,11 11,11H13C14.66,11 16,12.34 16,14V22H20V14C20,10.13 16.87,7 13,7Z" /></svg>
+                    <svg class="bowling-pin" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12,2C10.89,2 10,2.89 10,4S10.89,6 12,6S14,5.11 14,4S13.11,2 12,2M13,7H11C7.13,7 4,10.13 4,14V22H8V14C8,12.34 9.34,11 11,11H13C14.66,11 16,12.34 16,14V22H20V14C20,10.13 16.87,7 13,7Z" /></svg>
                 </div>
                 <p class="text-xl font-bold text-yellow-300 mt-4 text-shadow-gold animate-pulse">
-                    平山様の御言葉に背く者は、このゼロコーラの如く打ち倒されるであろう！
+                    平山様の御言葉に背く者は、このピンの如く打ち倒されるであろう！
                 </p>
             </section>
 
